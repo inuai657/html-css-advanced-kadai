@@ -1,0 +1,158 @@
+/* PC、スマホ共通スタイル */
+* {
+  box-sizing: border-box;
+}
+p {
+  font-size: 15px;
+}
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+/* メイン */
+main {
+  margin: 0 20px;
+}
+/* ナビゲーションのデコレーション */
+#nav-pc {
+  font-size: 14px;
+}
+#nav-pc ul {
+  display: flex;
+  padding-left: 0;
+}
+#nav-pc li {
+  list-style: none;
+}
+
+/* ナビゲーションのリンクの装飾設定 */
+#nav-pc a{
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+}
+
+/* メインビジュアル */
+#main-visual {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+#main-message > h1 {
+  font-size: 60px;
+  margin: 0;
+}
+#main-message > p {
+  font-size: 28px;
+  margin: 0;
+}
+#main-visual > img {
+  max-width: 100%;
+}
+
+/* 画面幅が767以上のとき */
+@media screen and (min-width:767px) {
+  #menu-sp {
+  display: none;
+  }
+  #nav-sp {
+  display: none;
+  }
+}
+
+
+/* ================
+  スマホ用のスタイル
+=================== */
+
+/* 画像幅が767px以下のとき */
+@media screen and (max-width:767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+  /* ヘッダー */
+  header {
+    margin: 0;
+  }
+  /* メイン */
+  main {
+    margin: 0;
+  }
+  #menu-sp {
+    float: right;
+    padding: 0;
+  }
+  #main-message h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #main-message p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  #nav-sp {
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+  #nav-sp ul {
+    padding-left: 0;
+  }
+  #nav-sp li {
+    list-style: none;
+  }
+
+    /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* ナビゲーションメニュー用ロゴ */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+  #nav-sp a {
+    display: block;
+  }
+  #nav-sp a:link {
+    color: #ffffff;
+  }
+  #nav-sp a:visited {
+    color: #ffffff;
+  }
+  #nav-sp a:active {
+    color: #ffffff;
+  }
+  #nav-sp .menu {
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+}
